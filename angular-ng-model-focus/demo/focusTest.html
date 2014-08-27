@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div ng-app="InputOnFocus" ng-init="inputVal">
+        <form name="focusForm">
+            <input name="testModel" type="text" add-focus ng-model="inputVal">
+            <span ng-if="focusForm.testModel.$focused">Input is focused</span>
+            <span ng-if="!focusForm.testModel.$focused">Input out of focus</span>
+        </form>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script src="../src/angular-ng-model-focus.js"></script>
+</body>
+</html>
